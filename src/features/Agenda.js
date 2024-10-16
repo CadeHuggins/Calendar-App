@@ -2,23 +2,12 @@ import React, { useState } from "react";
 import { View, StyleSheet, TouchableOpacity, Dimensions, Text } from "react-native";
 import { Agenda } from 'react-native-calendars';
 import { Card } from "react-native-paper";
-import Calendar from "../screens/calendar";
 
-interface Item {
-  name: string;
-  height: number;
-  day: string;
-}
+const Schedule = () => {
+    const [items, setItems] = useState({});
 
-interface Items {
-  [key: string]: Item[];
-}
-
-const Schedule: React.FC = () => {
-    const [items, setItems] = useState<Items>({});
-
-    const loadItemsForMonth = (day: any) => {
-        const newItems: Items = { ...items };
+    const loadItemsForMonth = (day) => {
+        const newItems = { ...items };
 
         for (let i = -15; i <= 15; i++) {
             const time = new Date(day.timestamp + i * 24 * 60 * 60 * 1000);
@@ -38,7 +27,7 @@ const Schedule: React.FC = () => {
         setItems(newItems);
     };
 
-    const renderItem = (item: any) => {
+    const renderItem = (item) => {
         return (
             <TouchableOpacity style={{ marginRight: 10, marginTop: 25 }}>
                 <Card>

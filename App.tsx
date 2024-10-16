@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View, Appearance, StatusBar, Platform } from 'react-native';
 import React from 'react';
-import BottomTabs from '../features/Bottomtabs';
+import BottomTabs from './src/features/Bottomtabs';
 
 function App() {
   return (
