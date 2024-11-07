@@ -12,7 +12,7 @@ const Card = ({ title, description, onPress }) => {
 
 const DriverList = () => {
     return (
-        <View style={{ flex: 1 }}>
+        <View>
             <Card
             title="DD's Name"
             description="123-456-7890"
@@ -42,7 +42,7 @@ const DriverList = () => {
         justifyContent: 'center',
         width: Dimensions.get('window').width, 
         alignSelf: 'center', 
-        padding: 20, 
+        padding: 20,
         backgroundColor: '#fff', 
         shadowColor: '#000', 
         shadowOffset: {
@@ -64,4 +64,3 @@ const DriverList = () => {
 });
   
   export default DriverList;
-

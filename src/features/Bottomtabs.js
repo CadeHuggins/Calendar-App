@@ -5,6 +5,7 @@ import Home from '../screens/Home';
 import Calendar from '../screens/Calendar';
 import { View, Text, TouchableOpacity } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons'
+import Emergencies from '../screens/Emergencies';
 
 const Tab = createBottomTabNavigator();
 export default function Tabs() {
@@ -32,6 +33,7 @@ export default function Tabs() {
             >
                 <Tab.Screen name="Home" component={Home}/>
                 <Tab.Screen name="Calendar" component={Calendar}/>
+                //<Tab.Screen name="Emergencies" component={Emergencies}/>
             </Tab.Navigator>
         </NavigationContainer>
     )
